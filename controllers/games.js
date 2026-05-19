@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 
 const getAll = async (req,res) => {
-    //#swagger.tags=['contacts']
+    //#swagger.tags=['games']
     const result = await mongodb.getDatabase('cluster0').db('project2(w3-4)').collection('games').find();
     result.toArray().then((games) => {
         res.setHeader('Content-Type', 'application/json');
@@ -13,7 +13,7 @@ const getAll = async (req,res) => {
 };
 
 const getSingle = async (req,res) => {
-    //#swagger.tags=['contacts']
+    //#swagger.tags=['games']
     const gameId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase('cluster0').db('project2(w3-4)').collection('games').find({ _id: gameId });
     result.toArray().then((games) => {
