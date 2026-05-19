@@ -1,0 +1,7 @@
+# testing
+
+# home
+GET http://localhost:3000
+
+### getAll
+GET http://localhost:3000/games 
