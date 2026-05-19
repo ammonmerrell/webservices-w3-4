@@ -5,10 +5,9 @@
     "description": "This API provides data from video games.",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "https://wdd341-w3-4.onrender.com/",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
