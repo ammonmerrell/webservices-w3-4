@@ -22,7 +22,27 @@ const getSingle = async (req,res) => {
     });
 };
 
+const createGame = async (req,res) => {
+    //#swagger.tags=['games']
+    const game = {
+        name: req.body.name,
+        releaseDate: req.body.releaseDate,
+        platform: req.body.platform,
+        genre: req.body.genre,
+        description: req.body.description,
+        players: req.body.players,
+        type: req.body.type
+    };
+    const response = await mongodb.getDatabase('cluster0').db('project2(w3-4)').collection('games').insertOne( game);
+    if (response.acknowledged > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error || 'Some error occured while creating the game.')
+    }
+};
+
 module.exports = {
     getAll,
-    getSingle
+    getSingle,
+    createGame
 };
