@@ -7,6 +7,6 @@ router.get('/', (req, res) => {
     res.send('Hello World!');
 });
 router.use('/games', require('./games'));
-
+router.use('/stores', require('./stores'));
 
 module.exports = router;
