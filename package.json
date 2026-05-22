@@ -32,7 +32,10 @@
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.9.0",
     "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
     "globals": "^17.6.0",
-    "node": "^22.22.3"
+    "node": "^22.22.3",
+    "prettier": "^3.8.3"
   }
 }
