@@ -29,7 +29,10 @@
     "validatorjs": "^3.22.1"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^25.9.0",
+    "eslint": "^10.4.0",
+    "globals": "^17.6.0",
     "node": "^22.22.3"
   }
 }
