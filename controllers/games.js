@@ -64,22 +64,14 @@ const updateGame = async (req,res) => {
 const deleteGame = async (req,res) => {
     //#swagger.tags=['games']
     const gameId = new ObjectId(req.params);
-    const game = {
-        name: req.body.name,
-        releaseDate: req.body.releaseDate,
-        platform: req.body.platform,
-        genre: req.body.genre,
-        description: req.body.description,
-        players: req.body.players,
-        type: req.body.type
-    };
-    const response = await mongodb.getDatabase('cluster0').db('project2(w3-4)').collection('games').replaceOne({ _id: gameId}, game);
-    if (response.modifiedCount > 0) {
+    const response = await mongodb.getDatabase('cluster0').db('project2(w3-4)').collection('games').deleteOne({ _id: gameId});
+    if (response.deletedCount > 0) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some error occured while updating the game.')
+        res.status(500).json(response.error || 'Some error occured while deleting the contact.')
     }
 };
+
 
 
 

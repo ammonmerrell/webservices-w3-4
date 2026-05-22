@@ -3,7 +3,7 @@ const router = express.Router();
 
 const gameControllers = require('../controllers/games.js');
 
-const validator = require('../utilities/validator.js');
+// const validator = require('../utilities/validator.js');
 
 router.get('/', gameControllers.getAll);
 router.get('/:id', gameControllers.getSingle);
