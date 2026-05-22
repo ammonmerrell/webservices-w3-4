@@ -42,7 +42,7 @@ const createGame = async (req,res) => {
 };
 
 const updateGame = async (req,res) => {
-    //#swagger.tags=['contacts']
+    //#swagger.tags=['games']
     const gameId = new ObjectId(req.params);
     const game = {
         name: req.body.name,
@@ -62,7 +62,7 @@ const updateGame = async (req,res) => {
 };
 
 const deleteGame = async (req,res) => {
-    //#swagger.tags=['contacts']
+    //#swagger.tags=['games']
     const gameId = new ObjectId(req.params);
     const game = {
         name: req.body.name,

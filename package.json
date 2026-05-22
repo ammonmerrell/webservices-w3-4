@@ -1,4 +1,22 @@
 {
+  "name": "webservices-w3-4",
+  "version": "1.0.0",
+  "description": "a node project for w3-4.",
+  "homepage": "https://github.com/ammonmerrell/webservices-w3-4#readme",
+  "bugs": {
+    "url": "https://github.com/ammonmerrell/webservices-w3-4/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ammonmerrell/webservices-w3-4.git"
+  },
+  "license": "ISC",
+  "author": "Ammon Merrell",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "autogen": "^0.0.1",
     "body-parser": "^2.2.2",
