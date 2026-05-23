@@ -54,10 +54,7 @@ const updateStore = async (req,res) => {
 const deleteStore = async (req,res) => {
     //#swagger.tags=['store']
     const storeId = new ObjectId(req.params);
-    const store = {
-        city: req.body.city,
-        items: req.body.items
-    };
+    
     const response = await mongodb.getDatabase('cluster0').db('project2(w3-4)').collection('stores').deleteOne({ _id: storeId});
     if (response.deletedCount > 0) {
         res.status(204).send();
