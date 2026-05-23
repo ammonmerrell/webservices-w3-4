@@ -3,7 +3,7 @@ const router = express.Router();
 
 const storeControllers = require('../controllers/stores.js');
 
-const validator = require('../utilities/validator.js');
+// const validator = require('../utilities/validator.js');
 
 router.get('/', storeControllers.getAll);
 router.get('/:id', storeControllers.getSingle);
