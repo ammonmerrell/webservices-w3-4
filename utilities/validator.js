@@ -1,5 +1,7 @@
 const validator = require('./validatorjsPlugin.js');
 
+// game validation
+
 const saveGame = (req, res, next ) => {
     const validationRule = {
         name: 'required|string',
@@ -12,7 +14,27 @@ const saveGame = (req, res, next ) => {
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
-            res.status(412).send({
+            res.status(400).send({
+                success: false,
+                message: 'Validation failed',
+                data: err
+            });
+        } else {
+            next();
+        }
+    });
+};
+
+// store validation
+
+const saveStore = (req, res, next ) => {
+    const validationRule = {
+        city: 'required|string',
+        items: 'required|string'
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+        if (!status) {
+            res.status(400).send({
                 success: false,
                 message: 'Validation failed',
                 data: err
@@ -25,7 +47,8 @@ const saveGame = (req, res, next ) => {
 
 
 module.exports = {
-    saveGame
+    saveGame,
+    saveStore
 }
 
 // const util = require('.');
